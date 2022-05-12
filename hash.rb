@@ -1,10 +1,12 @@
 
 tutor = { "name" => "jafet", "age" => 23, 20 => "twenty", [] => "array" }
 tutor["courses"] = 10
-tutor.default = 0
 
-puts tutor["edad"]
-puts tutor["undefined"]
+tutor.default = -1 # Value setted as default for keys that does not exists
+puts tutor["key undefined"]  # it will puts -1
+
+puts tutor["age"]
+
 puts tutor
 
 # Hash with simbols:
