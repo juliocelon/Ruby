@@ -11,7 +11,6 @@ class Video
   
   class YouTube < Video
     def self.test
-      @@class_variable = "My variable of class has changed"
       p @@class_variable       # The value of the variable of class is inherited
       p @instance_variable     # The VALUE of the variable of instance is NOT inherited
       @instance_variable = "My variable of INSTANCE has changed"
