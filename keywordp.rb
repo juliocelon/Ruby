@@ -19,15 +19,15 @@ hi(age:29, name:"jafet")
 hi(name:"jafet")
 hi(age:32)
 
-def hi_with_splat(name: "", age: 0, **options) # Here you can see the double splat
-  if age > 30
-    puts "Hi Mr. #{name}"
-  elsif age < 30
-    puts "Hi kid #{name}"
-  end
-
-  puts options[:favorite_toy]
-  puts options
+def hi_with_double_splat(name: "", age: 0, **options) # Here you can see the double splat, double splat converts several key-value pairs to a hash
+    if age > 30
+      puts "Hi Mr. #{name}"
+    elsif age < 30
+      puts "Hi kid #{name}"
+    end
+  
+    puts options[:favorite_toy]
+    puts "name:#{name}, age:#{age}, options:#{options}"
 end
-
- hi_with_splat(name: "jafet", age:6, favorite_toy: "car", heigth:165, favorite_animal:"bear")
+  
+hi_with_double_splat(name: "jafet", age:6, favorite_toy: "car", heigth:165, favorite_animal:"bear")
